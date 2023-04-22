@@ -69,18 +69,6 @@ class Engine2D:
         for figure in self.canvas:
             figure.draw(self.tk_canvas, self.pen_color)
         self.root.update()
-        self.tk_canvas.after(3000, self.tk_canvas.delete('all'))
+        self.tk_canvas.after(5000, self.tk_canvas.delete('all'))
+        self.canvas = []
         self.root.update()        
-
-engine = Engine2D(tk.Tk())
-engine.addFigure(Triangle((100, 300), (200, 200), (300, 300)))
-engine.addFigure(Circle(300, 200, 90))
-engine.addFigure(Rectangle(120, 120, 400, 200))
-engine.draw()
-engine.set_pen_color('Green')
-engine.draw()
-engine.set_pen_color('Red')
-engine.draw()
-engine.set_pen_color('Blue')
-engine.draw()
-pass
