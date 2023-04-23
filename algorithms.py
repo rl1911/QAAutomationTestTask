@@ -126,6 +126,7 @@ root.update()
 tk_canvas.after(5000,tk_canvas.delete('all'))
 
 #search shortest path
+#If start and finish cells bloked, program finishes with error. You have to run it again!!!
 while len(rq) > 0 or len(cq) > 0: # Keep repeating until there are no nodes with unexplored edges
 	# Remove the node you're about to explore the edges of
 	r = rq.popleft()
